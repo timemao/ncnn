@@ -947,7 +947,7 @@ int input_output_show(Mat blob,int bot_top,int idx,int n_all,int layer_index)
 #else
 	return 0;
 #endif
-}
+};
 
 #ifdef PRINT_MYJ_LOG
 int NetPrivate::do_forward_layer(const Layer* layer, std::vector<Mat>& blob_mats, const Option& opt, int layer_index) const

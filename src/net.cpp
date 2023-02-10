@@ -890,7 +890,8 @@ int NetPrivate::convert_layout(Mat& bottom_blob, const Layer* layer, const Optio
     return 0;
 }
 
-void input_output_show(Mat blob,int bot_top,int idx,int n_all,int layer_index) {
+int input_output_show(Mat blob,int bot_top,int idx,int n_all,int layer_index) 
+{
 #ifdef PRINT_MYJ_LOG
 	char mode[256];
 	if (bot_top == 0) {
@@ -942,7 +943,9 @@ void input_output_show(Mat blob,int bot_top,int idx,int n_all,int layer_index) {
 			MYJ_LOGE_NOPRINT("%s\n", show_str);
 		}
 	}
+	return 0;
 #else
+	return 0;
 #endif
 }
 
